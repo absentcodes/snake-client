@@ -14,7 +14,12 @@ const connect = function() {
   //event handler for connect event
   conn.on("connect", () => {
     console.log("Successfully connected to the game server!");
+    
+    // send name message upon connection
     conn.write("Name: FMF");
+
+    //send Move: up message upon connection
+    conn.write("Move: up")
   });
 
     
